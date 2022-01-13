@@ -1,0 +1,97 @@
+html {
+    width: 60%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+body {
+    height: 100%;
+    min-height: 100%;
+    line-height: 1.75;
+    background-color: #FFFFFF;
+}
+a:link:hover {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    cursor: pointer;
+    cursor: hand;
+}
+input[type=submit], button {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.fileLog {
+    border: 3px solid black;
+    padding: 6px;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: scroll;
+    max-height: 340px;
+    overflow-y: scroll;
+}
+.cardView {
+    border: 3px solid black;
+    padding: 6px;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: scroll;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+.statusPanel {
+    border: 3px solid black;
+    padding: 6px;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.dropDownCardView {
+    border: 3px solid black;
+    padding: 6px;
+}
+.showParameters {
+    border: 3px solid black;
+    padding: 6px;
+}
+.dropDownPropView {
+    border: 3px solid black;
+    padding: 6px;
+}
+.newVCard {
+    border: 3px solid black;
+    padding: 6px;
+}
+.bold {
+    font-weight: bold;
+}
+table, td, thead, th {
+    border: 2px solid black;
+}
+
+h1{
+    text-align: center;
+}
+@media(max-width: 900px) {
+    html {
+        font-size: 14px !important;
+        width: 80% !important;
+    }
+}
+@media(max-width: 480px) {
+    html {
+        font-size: 12px !important;
+        width: 90% !important;
+    }
+}
+@media(max-width: 320px) {
+    html {
+        font-size: 12px !important;
+        width: 100% !important;
+    }
+}

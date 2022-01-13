@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>vCard Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CHANGE ME">
+    <meta name="keywords" content="CHANGE ME">
+    <meta name="author" content="CHANGE ME">
+    <!-- Load jquery, bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- Custom CSS End -->
+</head>
+<body>
+    <h1>Assignment 3</h1>
+    
+    <p></p>
+
+    <div class="statusPanel" id="status">
+        <h5>Status Panel</h5>
+    </div>
+    <div class="fileLog">
+        <h4>File Log Panel</h4>
+        <table id=uploadFileName>
+            <thead>
+                <tr>
+                    <th class="bold" style="width:30%">File Name (click to download)</th>
+                    <th class="bold" style="width:55%">Individual's Name</th>
+                    <th class="bold" style="width:15%">Additional Properties</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="noFile" class = "bold" style="font-size:30px"></div>
+        <form ref='uploadForm'
+		id='uploadForm'
+        action='/upload'
+        method='post'
+        encType="multipart/form-data">
+        <div class="form-group">
+      	<input type="file" name="uploadFile" class="btn btn-secondary" accept=".vcf, .vcard">
+      	<input type='submit' value='Upload' class="btn btn-secondary" id="uploadFile">
+      </div>
+    </form>
+    </div>
+    <div class="dropDownCardView">
+        <h5 style="text-align: center">Choose a File To Display in Card View Panel</h5>
+        <label for="dropCardView">Choose a File:</label>
+        <select name="dropCardView" id="dropCardView"></select>
+        <br></br>
+        <input id="dropDown" type="button" class="btn btn-primary" value="Submit">
+    </div>
+    <div class="cardView">
+        <h4>Card View Panel</h4>
+        <table id="fileDropDown">
+            <thead>
+                <tr>
+                    <th class="bold" style="width:15%">Property #</th>
+                    <th class="bold" style="width:15%">Name</th>
+                    <th class="bold" style="width:60%">Values</th>
+                    <th class="bold" style="width:15%">Parameters</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <br></br>
+    <div class="showParameters">
+        <h5 style="text-align: center">Show Parameters</h5>
+        <input id="paramView" type="button" class="btn btn-primary" value="Show Parameters">
+        <table id="paramTable">
+            <thead>
+                <tr>
+                    <th class="bold" style="width:50%">Property #</th>
+                    <th class="bold" style="width:50%">Parameters and Values</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <br></br>
+
+    <h5 style="text-align: center">You must first submit a file to the card view panel in or to make changes to that file.</h5>
+    <div class="dropDownPropView">
+        <h5 style="text-align: center">Updating a Current Property </h5>
+        <label for="dropPropView">Choose a property to change:</label>
+        <select name="dropPropView" id="dropPropView"></select>
+        <input type="text" class="form-control" id="entryProp" placeholder="Enter Here New Value for Property">
+        <input id="dropDownProp" type="button" class="btn btn-primary" value="Submit">
+        <button type="button" onClick="window.location.reload();">Add Changes to The Panels Above</button>
+        <br></br>
+        <h5 style="text-align: center">Adding a New Property</h5>
+        <label for="entryBox2">Name:</label>
+        <input type="text" class="form-control" id="entryBox2" placeholder="Enter property name">
+        <label for="entryBox3">Value:</label>
+        <input type="text" class="form-control" id="entryBox3" placeholder="Enter value for property">
+        <input id="addProp" type="button" class="btn btn-primary" value="Submit">
+        <button type="button" onClick="window.location.reload();">Add Changes to The Panels Above</button>
+    </div>
+    <div class="newVCard">
+        <h5 style="text-align: center">Create A New vCard</h5>
+        <label for="entryFile">File Name To Save:</label>
+        <input type="text" class="form-control" id="entryFile" placeholder="Enter File Name">
+        <label for="entryName">First Name Value:</label>
+        <input type="text" class="form-control" id="entryName" placeholder="Enter First Name Value">
+        <input id="addCard" type="button" class="btn btn-primary" value="Submit">
+        <button type="button" onClick="window.location.reload();">Add Changes to The Panels Above</button>
+    </div>
+    <br></br>
+    <!-- Leave me at the bottom of body -->
+    <script src="/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
