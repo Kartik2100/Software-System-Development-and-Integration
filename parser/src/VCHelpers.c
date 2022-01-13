@@ -1,7 +1,4 @@
-/*
-Name: Kartik Patel
-Student ID: 1052085
-*/
+
 #include "LinkedListAPI.h"
 #include "VCParser.h"
 
