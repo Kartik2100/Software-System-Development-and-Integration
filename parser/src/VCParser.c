@@ -1,7 +1,4 @@
-/*
-Name: Kartik Patel
-Student ID: 1052085
-*/
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
